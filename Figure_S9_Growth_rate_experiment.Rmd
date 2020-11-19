@@ -1,5 +1,5 @@
 ---
-title: "Figure 8 Growth rate experiment using Softbugs isolated from _Acromyrmex_ ants (resident non-producers)"
+title: "Figure S9 Growth rate experiment using Softbugs isolated from _Acromyrmex_ ants (resident non-producers)"
 author: "Douglas Yu"
 date: "18 May 2020"
 output: html_document
@@ -35,7 +35,7 @@ conflict_prefer("expand", "tidyr", quiet = TRUE)
 ```
 
 ```{r}
-datafile <- "Figure_S8_Growth_rate_experiment_DataSheet_20180303.xlsx"
+datafile <- "Figure_S9_Growth_rate_experiment_DataSheet_20180303.xlsx"
 sheet_strepto <- "Streptomyces"
 sheet_softbugs <- "softbugs"
 ```
