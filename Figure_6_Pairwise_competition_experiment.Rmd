@@ -141,7 +141,7 @@ par(mfrow=c(1,1))
 
 # Start of analysis.  First analyse naively without random factor grouping the non-producer (softbug) strains
 
-Highly significant interaction effect:  growth medium has a strong effect on competitive outcomes, for both Steptomyces strains
+Highly significant interaction effect:  growth medium has a strong effect on competitive outcomes, for both Streptomyces strains
 ```{r}
 model2.2<-chisq.test(assay2.2_table, correct = F) # basic chi-square test
 model2.2$expected
@@ -188,14 +188,14 @@ Highly significant interaction effect.  p = 2.2e-16
 M2 <- glmer(Strep_outcomeLW ~ 1 + (1|Softbug_strain), family = binomial, data = assay2.2)
 M3 <- glmer(Strep_outcomeLW ~ medium2 + (1|Softbug_strain), family = binomial, data = assay2.2)
 summary(M3)
-anova(M2, M3) # p = 2.2e-16
+anova(M2, M3) # p = 2.2e-16, chisq = 87.941
 fixef(M3) # fewer wins (1s) on Control media
 plot_model(M3, type = "re")
 
 M4 <- glmer(Strep_outcomeLW ~ 1 + (1|Softbug_strain), family = binomial, data = assay8.2)
 M5 <- glmer(Strep_outcomeLW ~ medium2 + (1|Softbug_strain), family = binomial, data = assay8.2)
 summary(M5)
-anova(M4, M5) # p = 2.2e-16
+anova(M4, M5) # p = 2.2e-16, chisq = 103.61
 fixef(M5) # fewer wins (1s) on Control media
 plot_model(M5, type = "re")
 ```
